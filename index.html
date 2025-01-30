@@ -3,9 +3,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="/CSS/base.css">
+    <!--<link rel="stylesheet" href="/CSS/base.css">-->
+    <style>
+        html {
+            background-color:bisque;
+            padding: 17%;
+        }
+        h1 {
+            color:cornflowerblue;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="main-page">
+        <h1>Welcome to URL Checker</h1>
+        <center>
+            <input
+                type="text"
+                id="url_container"
+                placeholder="Enter a URL"
+                style="display: block; width: 90%; padding: 6px;"
+            />
+            <button style="height: 25px; margin-top: 1%;">Submit</button>
+        </center>
+    </div>
 </body>
 </html>
