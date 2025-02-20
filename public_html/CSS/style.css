@@ -1,0 +1,58 @@
+<style>
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            background-color: white;
+            padding: 15px 60px;
+            font-family: 'Inter', sans-serif;
+        }
+        nav a {
+            margin: 0px 20px;
+            text-decoration: none;
+            color: black;
+        }
+        .about_section {
+            background-color: #8FA4CE;
+            text-align: center;
+            padding: 30px;
+            color: white;
+        }
+        .about_section h1 {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        .container {
+          width: 80%;
+          margin: 20px auto;
+        }
+        .profile {
+          display: flex;
+          align-items: center;
+          background: #EAF1FF;
+          padding: 20px;
+          margin: 20px 0;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          margin-right: 20px;
+          border: 5px solid #646ab0;
+        }
+        .content {
+          flex: 1;
+        }
+        .content h3 {
+          margin: 0;
+        }
+        .icons {
+          float: right;
+        }
+    </style>

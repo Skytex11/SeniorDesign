@@ -1,23 +1,50 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <!--<link rel="stylesheet" href="/CSS/base.css">-->
+    <title>SecureScan</title>
     <style>
-        html {
-            background-color:bisque;
-            padding: 17%;
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
         }
-        h1 {
-            color:cornflowerblue;
-            text-align: center;
+        .main-page {
+            padding: 17%;
+            background: url(https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148874050.jpg) no-repeat center center/cover;
+            height: 100px;
+        }
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            background-color: white;
+            padding: 15px 60px;
+            font-family: 'Inter';
+        }
+        nav a {
+            margin: 0px 20px;
+            text-decoration: none;
+            color: black;
+        }
+        h2 {
+            font-family: 'IBM Plex Mono';
+            font-size: 32px;
+            display: flex;
         }
     </style>
 </head>
 <body>
-    <div id="main-page">
-        <h1>Welcome to URL Checker</h1>
+    <nav>
+        <a href="about.html">About</a>
+        <a href="learn.html">Learn</a>
+        <a href="https://github.com/Skytex11/SeniorDesign">Github</a>
+    </nav>
+    
+    
+    <div class="main-page">
+        <h1 style="color:cornflowerblue; text-align: center;">SecureScan</h1>
         <center>
             <input
                 type="text"
@@ -27,6 +54,16 @@
             />
             <button style="height: 25px; margin-top: 1%;">Submit</button>
         </center>
+        
     </div>
+    <section id="about">
+        <h2>What is Secure Scan?</h2>
+        <p>SecureScan is a powerful and user-friendly platform designed to help you scan files and URLs, ensuring they are safe before you open or interact with them. In today's digital age, cyber threats are more sophisticated than ever, and malicious files or links can lead to data breaches, identity theft, or system damage. Our goal is to provide an easy and effective way for users to analyze potentially harmful content and make informed decisions about their security.</p>
+    </section>
+    <section id="more">
+        <h2>Learn More</h2>
+        <p>Lorem ipsum odor amet, consectetur adipiscing elit. Elit mi pulvinar dictum eget diam fermentum dapibus gravida magnis. Pellentesque nec ad ipsum viverra aptent. Cubilia malesuada justo sagittis dapibus ipsum hendrerit natoque nulla habitant. Et velit hendrerit integer duis hac. Tempor ligula sit pellentesque ut sit velit? Etiam rhoncus a diam malesuada molestie euismod maecenas consequat.</p>
+        <button class="button">More</button>
+    </section>
 </body>
 </html>
