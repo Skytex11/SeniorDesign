@@ -19,6 +19,7 @@ console.log('VirusTotal API Key loaded successfully');
 
 app.use(cors());
 app.use(express.json());
+const pool = require('./db');
 
 const storage = multer.memoryStorage(); 
 const upload = multer({ storage });
@@ -80,6 +81,20 @@ app.post('/scan-file', upload.single('file'), async (req, res) => {
         res.status(500).json({ error: 'Error scanning file' });
     }
 });
+
+
+
+app.get('/test-db', async (req, res) => {
+    try {
+      const result = await pool.query('SELECT NOW()');
+      res.json({ message: 'Database connected!', time: result.rows[0] });
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: 'Database error' });
+    }
+  });
+
+
 
 // Start server
 app.listen(PORT, () => {
