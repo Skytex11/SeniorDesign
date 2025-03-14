@@ -2,6 +2,7 @@ const express = require('express');
 const multer = require('multer');
 const axios = require('axios');
 const cors = require('cors');
+const FormData = require('form-data');
 require('dotenv').config();
 
 const app = express();
@@ -20,6 +21,7 @@ console.log('VirusTotal API Key loaded successfully');
 app.use(cors());
 app.use(express.json());
 const pool = require('./db');
+
 
 const storage = multer.memoryStorage(); 
 const upload = multer({ storage });
@@ -61,26 +63,34 @@ app.post('/scan-url', async (req, res) => {
     }
 });
 
-// Route: Scan File
-app.post('/scan-file', upload.single('file'), async (req, res) => {
-    if (!req.file) return res.status(400).json({ error: 'File is required' });
+
+// Handle multiple files
+app.post('/scan-files', upload.single('file'), async (req, res) => {
+    if (!req.files) {
+        return res.status(400).json({ error: 'No files were uploaded' });
+    }
+
+    const formData = new FormData();
+    formData.append('file', req.file.buffer, req.file.originalname); 
 
     try {
-        const response = await axios.post(FILE_SCAN_URL, req.file.buffer, {
-            params: {
-                apikey: process.env.VIRUSTOTAL_API_KEY,
-            },
+        const response = await axios.post('https://www.virustotal.com/api/v3/files', formData, {
             headers: {
-                'Content-Type': 'multipart/form-data',
+                'x-apikey': process.env.VIRUSTOTAL_API_KEY,
+                ...formData.getHeaders(), 
             },
         });
 
-        res.json(response.data);
+        res.json(response.data); 
     } catch (error) {
         console.error('Error scanning file:', error);
         res.status(500).json({ error: 'Error scanning file' });
     }
 });
+
+
+
+
 
 
 
