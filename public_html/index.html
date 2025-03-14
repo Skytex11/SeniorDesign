@@ -90,8 +90,10 @@
             <p>Lorem ipsum dolor amet, consectetur adipiscing elit</p>
             <input type="text" placeholder="Enter text here">
             <button>Enter</button>
-            <input type="file" id="file-upload" style="display: none;" multiple>
-            <button class="upload-btn" onclick="document.getElementById('file-upload').click();">Upload file(s)</button>
+            <input type="file" id="fileInput">
+            <button onclick="uploadFile()">Upload file(s)</button>
+            <p id="status"></p>
+            
             <div class="file-list">
                 <h4>Uploaded Files:</h4>
                 <ul id="file-list"></ul>
@@ -106,15 +108,26 @@
         <button class="button">More</button>
     </div>
     <script>
-        document.getElementById('file-upload').addEventListener('change', function(event) {
-            const fileList = document.getElementById('file-list');
-            fileList.innerHTML = '';
-            for (const file of event.target.files) {
-                let li = document.createElement('li');
-                li.textContent = file.name;
-                fileList.appendChild(li);
+
+        async function uploadFile() {
+            const fileInput = document.getElementById("fileInput");
+            if (fileInput.files.length === 0) {
+                alert("Please select a file!");
+                return;
             }
-        });
+
+            const formData = new FormData();
+            formData.append("file", fileInput.files[0]);
+
+            const response = await fetch("/upload", {
+                method: "POST",
+                body: formData,
+            });
+
+            const result = await response.json();
+            document.getElementById("status").innerText = result.message;
+        }
+        
     </script>
 </body>
 </html>
