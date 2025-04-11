@@ -1,58 +1,195 @@
-<style>
-        body {
-            background-color: white;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        nav {
-            display: flex;
-            justify-content: flex-end;
-            background-color: white;
-            padding: 15px 60px;
-            font-family: 'Inter', sans-serif;
-        }
-        nav a {
-            margin: 0px 20px;
-            text-decoration: none;
-            color: black;
-        }
-        .about_section {
-            background-color: #8FA4CE;
-            text-align: center;
-            padding: 30px;
-            color: white;
-        }
-        .about_section h1 {
-            font-family: 'IBM Plex Mono', monospace;
-        }
-        .container {
-          width: 80%;
-          margin: 20px auto;
-        }
-        .profile {
-          display: flex;
-          align-items: center;
-          background: #EAF1FF;
-          padding: 20px;
-          margin: 20px 0;
-          border-radius: 10px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .profile img {
-          width: 100px;
-          height: 100px;
-          border-radius: 50%;
-          margin-right: 20px;
-          border: 5px solid #646ab0;
-        }
-        .content {
-          flex: 1;
-        }
-        .content h3 {
-          margin: 0;
-        }
-        .icons {
-          float: right;
-        }
-    </style>
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    padding: 15px 60px;
+}
+nav a {
+    margin: 0px 20px;
+    text-decoration: none;
+    color: black;
+}
+.section {
+    background-color: #8FA4CE;
+    background: url(https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148874050.jpg) no-repeat center center/cover;
+    text-align: center;
+    padding: 130px;
+    color: white;
+    
+}
+
+.container {
+  max-width: 950px;
+  min-width: 500px;
+  margin: 5px auto;
+  
+}
+
+.form-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    max-width: 800px;
+    
+}
+.form-box input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+}
+.form-box button {
+    padding: 10px 20px;
+    border: none;
+    background: rgb(44, 44, 124);
+    color: white;
+    cursor: pointer;
+}
+.upload-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    background: lightblue;
+    cursor: pointer;
+    border: none;
+}
+.file-list ul { 
+    list-style: none;
+    padding: 0;
+}
+.file-list li {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+
+.linkForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: fit-content;
+
+
+}
+.submitForm {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.submitForm label {
+    cursor: pointer;
+    padding-top: 7px;
+
+}
+
+
+.submitForm input[type="file"] {
+    display: none; /* Hide default file input */
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+
+
+.more {
+  padding: 10px 20px;
+  border: none;
+  background: rgb(44, 44, 124);
+  color: white;
+  cursor: pointer;
+
+}
+
+.profileImg img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover; /* crops excess, no squishing */
+  border-radius: 8px;
+}
+
+.profile {
+
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;  
+  height: auto;
+}
+
+.aboutSection {
+  max-width: 950px;
+  min-width: 500px;
+  margin: 100px auto 100px auto; /* Top: 40px, Bottom: 30px, Left/Right: auto */
+
+}
+
+h3 {
+  max-width: 950px;
+  min-width: 500px;
+  margin: 10px auto 10px auto;
+  font-size: large;
+}
+
+
+.icons{
+  display: flex;
+  flex-direction: row; 
+  max-width: 950px;
+  min-width: 500px;
+  margin: 10px auto 10px auto;
+
+}
+
+.headerSection {
+  background-color: #8FA4CE;
+  background: url(https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148874050.jpg) no-repeat center center/cover;
+  height: 100px;
+  padding: 130px;
+  color: white;
+  
+}
+
+section{
+  margin: auto 0 70px auto;
+}
+
+
+
+footer {
+    background-color: rgb(23, 23, 83);
+    height: 200px;
+    margin-top: 130px;
+}
+
+.gameWindow {
+  background-color: rgb(194, 194, 194);
+  max-width: 950px;
+  min-width: 500px;
+  height: 650px;
+  
+  margin: 100px auto 100px auto;
+
+}
+
+.testing {
+  margin: 40px auto 40px auto;
+  height: auto;
+}

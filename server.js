@@ -43,6 +43,21 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public_html/index.html');
 });
 
+app.get('/about', (req, res) => {
+    res.sendFile(__dirname + '/public_html/about.html');
+  });
+
+
+app.get('/learn', (req, res) => {
+res.sendFile(__dirname + '/public_html/learn.html');
+});
+
+
+app.get('/quiz', (req, res) => {
+res.sendFile(__dirname + '/public_html/quiz.html');
+});
+
+
 // Scan URL
 app.post('/scan-url', async (req, res) => {
     const { url } = req.body;

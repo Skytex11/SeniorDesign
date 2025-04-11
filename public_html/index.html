@@ -6,136 +6,20 @@
     <title>SecureScan</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=upload_file" />
-    <style>
-        body {
-            background-color: white;
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-        }
-        nav {
-            display: flex;
-            justify-content: flex-end;
-            background-color: white;
-            padding: 15px 60px;
-        }
-        nav a {
-            margin: 0px 20px;
-            text-decoration: none;
-            color: black;
-        }
-        .section {
-            background-color: #8FA4CE;
-            background: url(https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148874050.jpg) no-repeat center center/cover;
-            text-align: center;
-            padding: 130px;
-            color: white;
-            
-        }
-        .section h1 {
-            font-family: 'IBM Plex Mono', monospace;
-        }
-        .container {
-        max-width: 800px;
-        min-width: 500px;
-        margin: 75px auto;
-        }
-        .container h3 {
-            font-family: 'IBM Plex Mono', monospace;
-        }
-        .form-box {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            max-width: 800px;
-            
-        }
-        .form-box input {
-            width: 80%;
-            padding: 10px;
-            margin: 10px 0;
-        }
-        .form-box button {
-            padding: 10px 20px;
-            border: none;
-            background: rgb(44, 44, 124);
-            color: white;
-            cursor: pointer;
-        }
-        .upload-btn {
-            display: block;
-            margin: 10px auto;
-            padding: 10px;
-            background: lightblue;
-            cursor: pointer;
-            border: none;
-        }
-        .file-list ul {
-            list-style: none;
-            padding: 0;
-        }
-        .file-list li {
-            background: rgba(0, 0, 0, 0.1);
-            padding: 5px;
-            margin: 5px 0;
-            border-radius: 5px;
-        }
-
-
-        .linkForm {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            min-width: fit-content;
-
-
-        }
-        .submitForm {
-            padding-top: 10px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .submitForm label {
-            cursor: pointer;
-            padding-top: 7px;
-
-        }
-
-
-        .submitForm input[type="file"] {
-            display: none; /* Hide default file input */
-        }
-
-        .hidden {
-            visibility: hidden;
-        }
-
-        li {
-            font-size: 14px;
-
-        }
-
-    </style>
+    <link rel="stylesheet" href="CSS/style.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 </head>
 <body>
     <nav>
         <a href="about">About</a>
-        <a href="#learn">Learn</a>
+        <a href="learn.html">Learn</a>
         <a href="#github">Github</a>
     </nav>
     <div class="section">
         <div class="form-box">
-            <h2>SecureScan</h2>
-            <p>Lorem ipsum dolor amet, consectetur adipiscing elit</p>   
+            <h1>SecureScan</h1>
+            <p>Welcome, please enter link or file you want to scan.</p>   
            
             <form id="linkForm">
                 <input type="text" id="linkInput" placeholder="Paste Link Here" required>
@@ -169,12 +53,12 @@
         </div>
     </div>
     <div class="container">
-        <h2>What is Secure Scan?</h2>
+        <h1>What is Secure Scan?</h1>
         <p>SecureScan is a powerful and user-friendly platform designed to help you scan files and URLs, ensuring they are safe before you open or interact with them. In today's digital age, cyber threats are more sophisticated than ever, and malicious files or links can lead to data breaches, identity theft, or system damage. Our goal is to provide an easy and effective way for users to analyze potentially harmful content and make informed decisions about their security.</p>
-        <h2>Learn More</h2>
-        <p>Lorem ipsum odor amet, consectetur adipiscing elit. Elit mi pulvinar dictum eget diam fermentum dapibus gravida magnis. Pellentesque nec ad ipsum viverra aptent. Cubilia malesuada justo sagittis dapibus ipsum hendrerit natoque nulla habitant. Et velit hendrerit integer duis hac. Tempor ligula sit pellentesque ut sit velit? Etiam rhoncus a diam malesuada molestie euismod maecenas consequat.</p>
-        <p>Lorem ipsum odor amet, consectetur adipiscing elit. Elit mi pulvinar dictum eget diam fermentum dapibus gravida magnis. Pellentesque nec ad ipsum viverra aptent. Cubilia malesuada justo sagittis dapibus ipsum hendrerit natoque nulla habitant. Et velit hendrerit integer duis hac. Tempor ligula sit pellentesque ut sit velit? Etiam rhoncus a diam malesuada molestie euismod maecenas consequat.</p>
-        <button class="button">More</button>
+        <h1>About</h1>
+        <p>This site was created by three passionate computer security students from Drexel University who are dedicated to raising awareness about cybersecurity threats. On this page, you'll learn more about our team, our background in computer security, and our vision for the future as we continue our careers beyond graduation. We invite you to explore our profiles, discover our mission, and join us in making the internet a safer place for everyone.</p>
+        <p>Thank you for visiting SecureScan—we hope you find it useful and informative!</p>
+        <button class="more" onclick="location.href='about.html'">More</button>
     </div>
     
     
@@ -224,8 +108,6 @@ document.getElementById('fileInput').addEventListener('change', function () {
 document.getElementById("uploadForm").addEventListener("submit", async function (event) {
         event.preventDefault(); // Prevent page refresh
         
-   
-
         const formData = new FormData();
         const fileInput = document.getElementById('fileInput');
 

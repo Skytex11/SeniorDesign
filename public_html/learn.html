@@ -3,64 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
     <title>Learn</title>
-    <style>
-        body {
-            background-color: white;
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-        }
-        nav {
-            display: flex;
-            justify-content: flex-end;
-            background-color: white;
-            padding: 15px 60px;
-        }
-        nav a {
-            margin: 0px 20px;
-            text-decoration: none;
-            color: black;
-        }
-        .about_section {
-            background-color: #8FA4CE;
-            text-align: center;
-            padding: 30px;
-            color: white;
-        }
-        .about_section h1 {
-            font-family: 'IBM Plex Mono', monospace;
-        }
-        .container {
-          width: 80%;
-          margin: 20px auto;
-        }
-        .container h3 {
-            font-family: 'IBM Plex Mono', monospace;
-        }
-    </style>
+
+    
 </head>
 <body>
     <nav>
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="learn.html">Learn</a>
         <a href="https://github.com/Skytex11/SeniorDesign">Github</a>
     </nav>
 
+    <div class="headerSection"></div>
+    <div class="aboutSection">
+        <h1>Learn More</h1>
+        <p>Online scams are getting smarter. Every day, people fall for emails, messages, or websites that look legit—but aren’t. One of the most common traps is phishing. If you’re not careful, a single click can cost you your personal data, your money, or even your identity. The good news? You can learn how to spot these scams and stay safe.</p>
+        <p><b>Think you know about Phishing, play our interactive game below!</b></p>
+        <button class="more">Play Game</button>
     
-    <div class="about_section">
-        <h1>LEARN</h1>
-        <p>GOAL/PHISING INFO</p>
     </div>
+
+    
+
     <div class="container">
-        <h3>What is Phising</h3>
-        <a>info on phising</a>
-        <br>
-        <h3>How to Identify Scams</h3>
-        <a>ways to identify scams</a>
-        <br>
-        <h3>How to Protect Yourself</h3>
-        <a>security measures</a>
+        <article>
+            <section>
+                <h3>What is Phishing</h3>
+                <p>Phishing is a type of cyber attack where scammers pretend to be trustworthy sources—like your bank, a popular website, or even your boss—to trick you into giving up sensitive information. That might include passwords, credit card numbers, or Social Security details. These messages often come via email, text, or fake websites designed to look real.</p>
+            </section>
+            <section>
+                <h3>How to Identify Scams</h3>
+                <p>Phishing scams often look convincing, which is why people fall for them. But there are red flags—if you know where to look. From shady email addresses to urgent scare tactics, scammers follow predictable patterns. Learning to spot these signs can help you catch a scam before it catches you.</p>
+                <p>Scams usually have warning signs. Here’s what to watch for:</p>
+                <ul>
+                    <li><b>Suspicious sender:</b> An email from an address that doesn’t match the company’s usual domain.</li>
+                    <li><b>Urgent language:</b> Messages that say “act now,” “urgent,” or “your account will be locked.”</li>
+                    <li><b>Generic greetings:</b> “Dear user” instead of using your real name.</li>
+                    <li><b>Unexpected attachments or links:</b> Especially if you weren’t expecting anything.</li>
+                    <li><b>Spelling and grammar mistakes:</b> Most real companies proofread their communications.</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h3>How to Protect Yourself</h3>
+                <p>There’s no silver bullet for staying 100% safe online, but there are smart habits that drastically lower your risk. Simple actions like verifying links, enabling two-factor authentication, and keeping your software up to date go a long way. Think of it like locking your doors at night—basic, but effective.</p>
+                <ul>
+                    <li>Don’t click links in emails or texts unless you’re sure they’re legit.</li>
+                    <li>Verify the sender by checking the email address or contacting the company directly.</li>
+                    <li>Use two-factor authentication (2FA) to add an extra layer of security.</li>
+                    <li>Update your software regularly to patch security holes.</li>
+                    <li>Install antivirus software and run regular scans.</li>
+                </ul>
+            </section>
+            <section>
+                <h3>FAQs</h3>
+                <p>Still have questions? You’re not alone. Phishing tactics evolve, and so do the concerns people have about them. In this section, we’ll tackle the most common questions—like what to do if you slip up, or how phishing can hit beyond just email.</p>
+            
+                <p><b>Q: What should I do if I clicked a suspicious link?</b></p>
+                <p>Disconnect from the internet, run a security scan, and change your passwords immediately.</p>
+            
+                <p><b>Q:Can phishing happen over phone calls or text messages?</b></p>
+                <p>Yes. These are called vishing (voice phishing) and smishing (SMS phishing).</p>
+
+                <p><b>Are all phishing attempts obvious?</b></p>
+                <p>No. Some are very sophisticated and hard to spot, which is why awareness is key.</p>
+            
+            </section>
+            <section>
+                <h3>Review</h3>
+                <p>Want to review what you learned about phishing. Please take our quiz!</p>
+                <button class="more" onclick="location.href='quiz.html'">Go to Quiz</button>
+            </section>
+
+        </article>
+
+
+        <div>
+            <h1>Phishing</h1>
+            <p>Think you got what it takes to identify common phishing traits within an email? Test your abilites with our game below:</p>
+            <div class="gameWindow">
+
+            </div>
+        </div>
+       
     </div>
+
+    <footer></footer>
 </body>
 </html>
